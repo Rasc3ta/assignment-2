@@ -1,6 +1,7 @@
 :root {
   --font-family: "Mulish", sans-serif;
   --orage: #ff5400;
+  --grey: #424247;
 }
 
 * {
@@ -32,7 +33,8 @@ nav ul {
 }
 
 nav {
-  margin: 3rem 5rem;
+  margin: 3rem auto 3rem;
+  max-width: 75vw;
 }
 
 .companyName {
@@ -49,7 +51,7 @@ nav h1 {
 
 .logo {
   padding: 1.75rem;
-  margin-right: .75rem;
+  margin-right: 0.75rem;
   background-image: url("./Images/Group\ 40071\ \(2\).png");
   background-position: center;
   background-repeat: no-repeat;
@@ -59,6 +61,7 @@ nav h1 {
 nav ul {
   justify-content: space-evenly;
   list-style-type: none;
+  flex-flow: row wrap;
 }
 
 nav ul li {
@@ -69,13 +72,14 @@ nav ul li {
 }
 
 nav li a {
+  color: var(--grey);
   text-align: center;
   font-size: 1.125rem;
   font-weight: 700;
 }
 
 .hamburger {
-  padding: .75rem;
+  padding: 0.75rem;
   border: none;
   background-color: rgba(255, 255, 255, 0);
   background-image: url("./Images/menu.png   ");
@@ -84,38 +88,145 @@ nav li a {
   background-size: contain;
 }
 
-/* responsive */
-
-@media screen and (min-width: 601px) {
-    .hamburger {
-        display: none;
-    }
-
-    .logo {
-        padding: 2rem;
-    }
+.banner {
+  margin: auto;
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0)
+    ),
+    url("./Images/Group\ 13\ \(1\)\ \(1\).png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 75vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  padding: 7rem 0rem;
 }
 
+.banner h1 {
+  color: #fff;
+  font-size: 4rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 1rem;
+}
 
+.banner p {
+  max-width: 50%;
+  color: #fff;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 3rem;
+}
 
-@media screen and (max-width: 600px) {
+.banner form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.368);
+  border-radius: 0.5rem;
+}
 
-    nav {
-        margin: 1.25rem;
-    }
+.banner input,
+.banner select,
+.banner button {
+  color: rgba(19, 19, 24, 0.5);
+  border: none;
+  font-size: 1rem;
+  font-weight: 400;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  width: 25%;
+  
+}
 
-    nav ul li{
-        display: none;
-        
-    }
+.banner button {
+  padding: 1rem;
+  font-weight: 700;
+  color: white;
+  background-color: var(--orage);
+}
 
-    .logo {
-        padding: 1rem;
-    }
+.banner button::before {
+  content: "";
+  padding: 0.5rem;
+  background-image: url("./Images/search.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 0.25rem;
+}
 
-    nav h1 {
-        
-font-size: 1.34644rem; 
-    }
+/* responsive */
 
+@media screen and (min-width: 761px) {
+  .hamburger {
+    display: none;
+  }
+
+  .logo {
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 760px) {
+
+  .companyName {
+  flex-flow: row nowrap;  
+    align-items: center;
+  }
+  
+  .banner {
+    min-width: 20rem;
+    height: auto;
+  }
+
+  nav {
+    width: 100%;
+    margin: 1.25rem auto;
+  }
+
+  nav ul li {
+    display: none;
+  }
+
+  .logo {
+    padding: 1rem;
+  }
+
+  nav h1,
+  .banner h1 {
+    font-size: 1.35rem;
+    margin-bottom: 0.5rem;
+    margin-top: 2rem;
+  }
+
+  nav h1 {
+    margin-top: auto;
+  }
+
+  .banner p {
+    font-size: 0.875rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+  }
+
+  .banner form {
+    flex-flow: column wrap;
+    margin-bottom: 2rem;
+  }
+
+  .banner input,
+  .banner select,
+  .banner button {
+    width: 100%;
+  }
 }
