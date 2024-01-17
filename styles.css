@@ -227,14 +227,14 @@ nav li a {
   text-align: center;
 }
 
-.gridSection h2
-{
+.gridSection h2 {
   margin: 6rem auto 1.5rem;
   font-size: 2.5rem;
   font-weight: 800;
 }
 
-.gridSection p {
+.gridSection p,
+.deals p {
   color: var(--grey);
   font-size: 1rem;
   font-weight: 400;
@@ -327,7 +327,8 @@ nav li a {
   text-align: center;
 }
 
-.edge h2 {
+.edge h2,
+.deals h2 {
   margin: 6rem auto 1.5rem;
   font-size: 2.5rem;
   font-weight: 800;
@@ -374,12 +375,100 @@ nav li a {
   width: 4rem;
 }
 
-
 /* deals & discount */
 
+.deals>p {
+  text-align: center;
+}
 
+.dealWrapper {
+  width: 100%;
+  height: calc(30vw + 6rem);
+  border-radius: 1rem;
+  background-image: url("./Images/Group\ 39.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.dealWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 3rem;
+}
+
+.deals {
+  margin: auto;
+  width: 75vw;
+  margin-bottom: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.deal {
+  backdrop-filter: blur(1px);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  width: 60%;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.deal ul {
+  list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.deal ul li {
+  color: var(--grey);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.deal h3 {
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.deal p {
+  color: var(--grey);
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+.deal .price {
+  color: var(--orage);
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.deal button, button {
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  background-color: var(--orage);
+  color: #fff;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.middle {
+  justify-content: flex-end;
+  background-image: url("./Images/Group\ 40.png");
+}
 
 /* responsive */
+
+
 
 @media screen and (min-width: 761px) {
   .hamburger {
@@ -388,6 +477,12 @@ nav li a {
 
   .logo {
     padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .deal {
+    width: 70%;
   }
 }
 
@@ -490,11 +585,11 @@ nav li a {
 
   .edge h2 {
     margin-top: 6rem;
-        font-size: 1.25rem;
+    font-size: 1.25rem;
   }
   .edge p {
-        font-size: 0.875rem;
-        margin-bottom: 2rem;
+    font-size: 0.875rem;
+    margin-bottom: 2rem;
   }
 
   .edge .edgeWrapper {
@@ -503,4 +598,55 @@ nav li a {
     justify-content: space-between;
   }
 
+  .dealWrapper {
+    height: 90vw;
+  }
+
+  .deal {
+    align-self: flex-end;
+    justify-self:flex-start ;
+  }
+  
+  .middle {
+  align-self: flex-start;
+  justify-self:flex-start ;
+
+}  
+
+  .deal ul {
+    margin-bottom: .5rem;
+  }
+
+  .deal h3 {
+    margin-bottom: .5rem;
+
+    font-size: 1.25rem;
+  }
+
+  .deal p {
+    font-size: 0.875rem;
+    margin-bottom: .5rem;
+  }
+
+  .deal .price {
+    margin-bottom: .5rem;
+    font-size: 1rem;
+  }
+
+  .deal button {
+    padding: .25rem .5rem;
+  }  
+  
+}
+
+@media screen and (max-width: 550px) {
+
+  .dealWrapper {
+    padding: 1rem;
+  }
+
+  .deal {
+    padding: .5rem;
+    width: 100%;
+  }
 }
