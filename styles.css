@@ -1,7 +1,7 @@
 :root {
   --font-family: "Mulish", sans-serif;
   --orage: #ff5400;
-  --grey: #424247;
+  --grey: rgba(19, 19, 24, 0.7);
 }
 
 * {
@@ -145,7 +145,6 @@ nav li a {
   border-radius: 0.5rem;
   padding: 1rem;
   width: 25%;
-  
 }
 
 .banner button {
@@ -165,6 +164,61 @@ nav li a {
   margin-right: 0.25rem;
 }
 
+.popularTours {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: auto;
+  width: 75vw;
+  margin-top: 5rem;
+}
+
+.popularTours h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.popularTours li,
+.popularTours p {
+  color: var(--grey);
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.popularTours button {
+  margin-top: 2rem;
+}
+
+.popularTours ul {
+  padding-left: 1rem;
+}
+
+.popularTours button {
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  background-color: var(--orage);
+  color: white;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.popularTours .contentWrapper {
+  max-width: 50%;
+}
+
+.popularTours .img {
+  border-radius: 1rem;
+  padding: 20%;
+  background-image: url("./Images/Rectangle\ 4.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 /* responsive */
 
 @media screen and (min-width: 761px) {
@@ -178,12 +232,11 @@ nav li a {
 }
 
 @media screen and (max-width: 760px) {
-
   .companyName {
-  flex-flow: row nowrap;  
+    flex-flow: row nowrap;
     align-items: center;
   }
-  
+
   .banner {
     min-width: 20rem;
     height: auto;
@@ -229,4 +282,30 @@ nav li a {
   .banner button {
     width: 100%;
   }
+
+  .popularTours {
+    flex-flow: column nowrap;
+    margin-top: 1.5rem;
+  }
+
+  .popularTours h2 {
+    font-size: 1.25rem;
+  }
+
+  .popularTours li,
+  .popularTours p {
+    font-size: 0.875rem;
+  }
+
+  .popularTours .contentWrapper {
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .popularTours .img {
+    width: 100%;
+    height: 75vw;
+  }
+
+
 }
