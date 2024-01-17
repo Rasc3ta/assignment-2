@@ -148,7 +148,7 @@ nav li a {
 }
 
 .banner button {
-  padding: 1rem;
+  padding: 1em;
   font-weight: 700;
   color: white;
   background-color: var(--orage);
@@ -198,7 +198,7 @@ nav li a {
 .popularTours button {
   border: none;
   border-radius: 0.5rem;
-  padding: 1rem 2rem;
+  padding: 1em 2em;
   background-color: var(--orage);
   color: white;
   text-align: center;
@@ -453,7 +453,7 @@ nav li a {
 .deal button, button {
   border: none;
   border-radius: 0.5rem;
-  padding: 1rem 2rem;
+  padding: 1em 2em;
   background-color: var(--orage);
   color: #fff;
   text-align: center;
@@ -464,6 +464,50 @@ nav li a {
 .middle {
   justify-content: flex-end;
   background-image: url("./Images/Group\ 40.png");
+}
+
+
+/* video section */
+.video {
+  gap: 1rem;
+  display: flex;
+  margin: auto;
+  width: 75vw;
+  margin-bottom: 3rem;
+}
+
+.video .content {
+max-width: calc(50% - 1rem);
+}
+
+.video .content h2 {
+font-size: 2.5rem;
+font-weight: 800;
+margin-bottom: 1rem;
+}
+
+.video .content p {
+  margin-bottom: 1rem;
+  color: var(--grey);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.video .content ul{
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.video .content li {
+  margin-bottom: 1rem;
+  color: black;
+font-size: 1rem;
+font-weight: 700;
+}
+
+.video video {
+  max-width: 50%;
+  border-radius: 1rem;
 }
 
 /* responsive */
@@ -638,6 +682,18 @@ nav li a {
   }  
   
 }
+
+
+@media screen and (max-width: 600px) {
+  .video .content h2, .video .content button {
+    font-size: 1.25rem;
+  }
+
+  .video .content p, .video .content li {
+    font-size: .875rem;
+  }
+}
+
 
 @media screen and (max-width: 550px) {
 
